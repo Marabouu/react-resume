@@ -1,0 +1,26 @@
+.Badge {
+  box-sizing: border-box;
+  border-radius: 11px;
+  margin-top: 30px;
+  width: max-content;
+  padding: 2px 12px;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: 'Roboto';
+}
+
+.Badge--green {
+  background: #7abcac;
+}
+
+.Badge--yellow {
+  background: #d8da79;
+}
+
+.Badge--brown {
+  background: #c29486;
+}
+
+.Badge--grey {
+  background: grey;
+}

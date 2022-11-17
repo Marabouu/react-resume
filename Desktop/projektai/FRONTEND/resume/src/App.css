@@ -72,22 +72,6 @@ main h1 {
   flex: 2;
 }
 
-.hr {
-  box-sizing: border-box;
-  margin: 0 auto;
-  margin-top: 8px;
-  border: 4px solid #dcdcdc;
-}
-
-.hr2 {
-  box-sizing: border-box;
-
-  border: 10px solid #7abcac;
-  width: 70px;
-  margin-top: -14px;
-  margin-left: 0px;
-}
-
 .hr3 {
   box-sizing: border-box;
   margin: 0 auto;
@@ -138,33 +122,6 @@ main img {
 .mokyklos-pavadinimas {
   text-align: left;
   line-height: 1.5rem;
-}
-
-.badge {
-  box-sizing: border-box;
-  border-radius: 11px;
-  margin-top: 30px;
-  width: max-content;
-  padding: 2px 12px;
-  font-size: 16px;
-  line-height: 19px;
-  font-family: 'Roboto';
-}
-
-.badge--green {
-  background: #7abcac;
-}
-
-.badge--yellow {
-  background: #d8da79;
-}
-
-.badge--brown {
-  background: #c29486;
-}
-
-.badge--grey {
-  background: grey;
 }
 
 .work-experience {

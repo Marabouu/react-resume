@@ -1,0 +1,21 @@
+.Separator {
+  background: #dcdcdc;
+  height: 8px;
+  border: none;
+}
+
+.Separator--fancy {
+  position: relative;
+  overflow: visible;
+}
+
+.Separator--fancy::before {
+  content: '';
+  display: block;
+  height: 14px;
+  width: 70px;
+  background: #7abcac;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+}

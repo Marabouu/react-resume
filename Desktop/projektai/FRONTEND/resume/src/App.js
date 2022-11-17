@@ -1,7 +1,16 @@
 import './App.css';
+import './components/Separator/index.css';
+import Separator from './components/Separator';
+import Badge from './components/Badge';
+import Link from './components/Link';
 import InstagramLogo from './images/ig.webp';
 import FacebookLogo from './images/fb.webp';
 import TwitterLogo from './images/tw.webp';
+
+const Facebook = { FacebookLogo };
+const FB_LINK_SRC = 'https://facebook.com';
+const TW_LINK_SRC = 'https://twitter.com';
+const IG_LINK_SRC = 'https://instagram.com';
 
 function App() {
   return (
@@ -22,37 +31,23 @@ function App() {
           <div className="flexboxas">
             <section>
               <h1>LINKS</h1>
-
-              <hr className="hr" />
-              <hr className="hr2" />
+              <Separator type="fancy" />
               <div className="imgDiv">
-                <div>
-                  <img src={FacebookLogo} />
-                  <a href="https://facebook.com" target="_blank">
-                    Facebook
-                  </a>
-                </div>
-                <div>
-                  <img src={TwitterLogo} />
-                  <a href="https://twitter.com" target="_blank">
-                    Twitter
-                  </a>
-                </div>
-                <div>
-                  <img src={InstagramLogo} />
-                  <a href="https://instagram.com" target="_blank">
-                    Instagram
-                  </a>
-                </div>
+                <Link LinkSrc={FB_LINK_SRC} imgSrc={FacebookLogo}>
+                  Facebook
+                </Link>
+                <Link LinkSrc={TW_LINK_SRC} imgSrc={TwitterLogo}>
+                  Twitter
+                </Link>
+                <Link LinkSrc={IG_LINK_SRC} imgSrc={InstagramLogo}>
+                  Instagram
+                </Link>
               </div>
             </section>
 
             <section className="apiemane">
               <h1>APIE MANE</h1>
-
-              <hr className="hr" />
-              <hr className="hr2" />
-
+              <Separator type="fancy" />
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Exercitationem earum dolores asperiores beatae mollitia adipisci
@@ -67,51 +62,42 @@ function App() {
             <section>
               <h1>EDUCATION</h1>
 
-              <hr className="hr" />
-              <hr className="hr2" />
+              <Separator type="fancy" />
               <p className="mokyklos-pavadinimas">
-                MOKYKLOS PAVADINIMAS
-                <br /> Nemežio VclassNameurine
-                <br /> 2000 - 2012
-                <br /> vclassNameurinis
+                <b>MOKYMOSI ISTAIGA</b>
+                <li>Nemežio Vidurine</li>
+                <li>2000 - 2012</li>
+                <li>Vidurinis</li>
               </p>
 
               <hr className="hr3" />
 
               <p className="mokyklos-pavadinimas">
-                MOKYKLOS PAVADINIMAS
-                <br /> VTDKO
-                <br /> 2012 - 2016
-                <br /> Aukstasis
+                <b>MOKYMOSI ISTAIGA</b>
+                <li>VTDKO</li>
+                <li>2012 - 2016</li>
+                <li>Aukstasis</li>
               </p>
             </section>
 
             <section>
               <h1>PERSONAL SKILLS</h1>
 
-              <hr className="hr" />
-              <hr className="hr2" />
-              <div>
-                <p className="badge badge--green">KOMANDINIS</p>
-              </div>
-              <div>
-                <p className="badge badge--yellow">KOMUNIKABILUS</p>
-              </div>
-              <div>
-                <p className="badge badge--brown">ORGANIZUOTAS</p>
-              </div>
-              <p className="badge badge--grey">IMLUS</p>
+              <Separator type="fancy" />
+              <Badge color="green">KOMANDINIS</Badge>
+              <Badge color="yellow">KOMUNIKABILUS</Badge>
+              <Badge color="brown">ORGANIZUOTAS</Badge>
+              <Badge color="grey">IMLUS</Badge>
             </section>
 
             <section>
               <h1>TECHNICAL SKILLS</h1>
 
-              <hr className="hr" />
-              <hr className="hr2" />
-              <div className="badge badge--green">HTML</div>
-              <div className="badge badge--green">CSS/SCSS</div>
-              <div className="badge badge--yellow">JAVASCRIPT</div>
-              <div className="badge badge--yellow">REACT.JS</div>
+              <Separator type="fancy" />
+              <Badge color="green">HTML</Badge>
+              <Badge color="green">CSS/SCSS</Badge>
+              <Badge color="yellow">JAVASCRIPT</Badge>
+              <Badge color="yellow">REACT.JS</Badge>
             </section>
           </div>
 
@@ -119,11 +105,12 @@ function App() {
             <section className="skiltis">
               <h1>WORK EXPERIENCE</h1>
 
-              <hr className="hr" />
-              <hr className="hr2" />
+              <Separator type="fancy" />
               <div className="work-experience">
                 <div className="job-position job-position--position1">
-                  <p>JOB POSITION</p>
+                  <p>
+                    <b>JOB POSITION</b>
+                  </p>
                   <p>Company</p>
                   <p>2018 - present</p>
                   <p className="job-position-p">
@@ -135,7 +122,9 @@ function App() {
                 </div>
 
                 <div className="job-position job-position--position2">
-                  <p>JOB POSITION</p>
+                  <p>
+                    <b>JOB POSITION</b>
+                  </p>
                   <p>Company</p>
                   <p>2018 - present</p>
                   <p className="job-position-p">
@@ -147,7 +136,9 @@ function App() {
                 </div>
 
                 <div className="job-position">
-                  <p>JOB POSITION</p>
+                  <p>
+                    <b>JOB POSITION</b>
+                  </p>
                   <p>Company</p>
                   <p>2018 - present</p>
                   <p className="job-position-p">
@@ -186,15 +177,14 @@ function App() {
               <div className="testukas-su-media-queries3">
                 <p className="footer-box">SOCIAL</p>
                 <p className="footer-box-padding">
-                  <a href="https://instagram.com" target="_blank">
+                  <Link LinkSrc={IG_LINK_SRC} imgSrc={InstagramLogo}>
                     Instagram
-                  </a>
+                  </Link>
                 </p>
-                <p>
-                  <a href="https://www.facebook.com" target="_blank">
-                    FACEBOOK
-                  </a>
-                </p>
+
+                <Link LinkSrc={FB_LINK_SRC} imgSrc={FacebookLogo}>
+                  Facebook
+                </Link>
               </div>
             </div>
           </footer>
