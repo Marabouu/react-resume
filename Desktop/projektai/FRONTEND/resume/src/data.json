@@ -1,0 +1,92 @@
+{
+  "en": {
+    "intro": {
+      "name": "ROLAND SKREBUTENAS",
+      "jobTitle": "PROGRAMMER",
+      "cv": "CV Example"
+    },
+    "about": {
+      "title": "ABOUT ME",
+      "content": "Lollipop fruitcake cheesecake dessert donut bear claw wafer icing pie. Tart gummi bears puc"
+    },
+    "links": {
+      "title": "LINKS"
+    },
+    "education": {
+      "title": "EDUCATION",
+      "schName": "EDUCATIONAL INSTITUTION"
+    },
+    "pSkills": {
+      "title": "PERSONAL SKILLS",
+      "sk1": "TEAM PERSON",
+      "sk2": "COMMUNICATIVE",
+      "sk3": "ORGANIZED",
+      "sk4": "RECEPTIVE"
+    },
+    "tSkills": {
+      "title": "TECHNICAL SKILLS"
+    },
+    "workExperience": {
+      "title": "WORK EXPERIENCE",
+      "position": "JOB POSITION",
+      "company": "Company",
+      "present": "2018 - present",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut justo libero. Vestibulum vitae mattis diam. Vivamus eleifend diam vel tempor lacinia. Suspendisse non augue. Lorem ipsum do Consectetur adipiscing elit"
+    },
+    "address": {
+      "title": "ADDRESS",
+      "content": "Gediminas avenue."
+    },
+    "contact": {
+      "title": "CONTACT"
+    },
+    "social": {
+      "title": "SOCIAL"
+    }
+  },
+  "lt": {
+    "intro": {
+      "name": "ROLANDAS SKREBUTENAS",
+      "jobTitle": "PROGRAMUOTOJAS",
+      "cv": "CV Sablonas"
+    },
+    "about": {
+      "title": "APIE MANE",
+      "content": "Lietuviskas surio pyragu pilnas tekstas dessert donut bear claw wafer icing pie. Tart gumm:"
+    },
+    "links": {
+      "title": "NUORODOS"
+    },
+    "education": {
+      "title": "EDUKACIJA",
+      "schName": "MOKYMOSI ISTAIGA"
+    },
+    "pSkills": {
+      "title": "ASMENINIAI IGUDZIAI",
+      "sk1": "KOMANDINIS",
+      "sk2": "KOMUNIKABILUS",
+      "sk3": "ORGANIZUOTAS",
+      "sk4": "IMLUS"
+    },
+    "tSkills": {
+      "title": "TECHNINIAI IGUDZIAI"
+    },
+    "workExperience": {
+      "title": "DARBO PATIRTIS",
+      "position": "DARBO POZICIJA",
+      "company": "Imone",
+      "present": "NUO - 2018",
+      "content": "Klientas yra labai svarbus, klientas seks klientas. Mecenas kaip tik laisvas. Nekilnojamojo turto pramonės gyvenimas. Vivamus eleifend diam vel tempor lacinia. Nereklamuoti. Norėčiau padėkoti už jūsų paramą"
+    },
+    "address": {
+      "title": "ADRESAS",
+      "content": "Gedimino prospektas."
+    },
+    "contact": {
+      "title": "KONTAKTAI"
+    },
+    "social": {
+      "title": "SOCIALINIAI TINKLAI"
+    }
+  }
+}

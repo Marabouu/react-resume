@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import data from './data.json';
 import './App.css';
 import './components/Separator/index.css';
 import Separator from './components/Separator';
@@ -13,24 +15,48 @@ const TW_LINK_SRC = 'https://twitter.com';
 const IG_LINK_SRC = 'https://instagram.com';
 
 function App() {
+  const [lang, setLang] = useState('en');
+  const {
+    intro,
+    about,
+    links,
+    education,
+    pSkills,
+    tSkills,
+    workExperience,
+    address,
+    contact,
+    social,
+  } = data[lang];
   return (
     <div className="App">
       <body>
         <main className="turinys">
           <header className="header">
-            <h1 className="cv-sablonas">CV SABLONAS</h1>
+            <div>
+              <select
+                onChange={(e) => {
+                  setLang(e.target.value);
+                }}
+              >
+                <option value="en">English</option>
+
+                <option value="lt">Lietuviskai</option>
+              </select>
+            </div>
+            <h1 className="cv-sablonas">{intro.cv}</h1>
             <div className="tusciadeze">
-              <p className="rolandas-skrebutenas">ROLANDAS SKREBUTENAS</p>
+              <p className="rolandas-skrebutenas">{intro.name}</p>
             </div>
 
             <div className="tusciadeze2">
-              <p className="p1">PROGRAMUOTOJAS</p>
+              <p className="p1">{intro.jobTitle}</p>
             </div>
           </header>
 
           <div className="flexboxas">
             <section>
-              <h1>LINKS</h1>
+              <h1>{links.title}</h1>
               <Separator type="fancy" />
               <div className="imgDiv">
                 <Link LinkSrc={FB_LINK_SRC} imgSrc={FacebookLogo}>
@@ -46,25 +72,19 @@ function App() {
             </section>
 
             <section className="apiemane">
-              <h1>APIE MANE</h1>
+              <h1>{about.title}</h1>
               <Separator type="fancy" />
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Exercitationem earum dolores asperiores beatae mollitia adipisci
-                culpa, possimus expedita doloribus delectus at fuga nulla
-                aspernatur corrupti itaque veritatis laborum quis sit.Lorem
-                ipsum dolor sit, amet consectetur
-              </p>
+              <p>{about.content}</p>
             </section>
           </div>
 
           <div className="flexboxas2">
             <section>
-              <h1>EDUCATION</h1>
+              <h1>{education.title}</h1>
 
               <Separator type="fancy" />
               <p className="mokyklos-pavadinimas">
-                <b>MOKYMOSI ISTAIGA</b>
+                <b>{education.schName}</b>
                 <li>Nemežio Vidurine</li>
                 <li>2000 - 2012</li>
                 <li>Vidurinis</li>
@@ -73,7 +93,7 @@ function App() {
               <hr className="hr3" />
 
               <p className="mokyklos-pavadinimas">
-                <b>MOKYMOSI ISTAIGA</b>
+                <b>{education.schName}</b>
                 <li>VTDKO</li>
                 <li>2012 - 2016</li>
                 <li>Aukstasis</li>
@@ -81,17 +101,17 @@ function App() {
             </section>
 
             <section>
-              <h1>PERSONAL SKILLS</h1>
+              <h1>{pSkills.title}</h1>
 
               <Separator type="fancy" />
-              <Badge color="green">KOMANDINIS</Badge>
-              <Badge color="yellow">KOMUNIKABILUS</Badge>
-              <Badge color="brown">ORGANIZUOTAS</Badge>
-              <Badge color="grey">IMLUS</Badge>
+              <Badge color="green">{pSkills.sk1}</Badge>
+              <Badge color="yellow">{pSkills.sk2}</Badge>
+              <Badge color="brown">{pSkills.sk3}</Badge>
+              <Badge color="grey">{pSkills.sk4}</Badge>
             </section>
 
             <section>
-              <h1>TECHNICAL SKILLS</h1>
+              <h1>{tSkills.title}</h1>
 
               <Separator type="fancy" />
               <Badge color="green">HTML</Badge>
@@ -103,50 +123,35 @@ function App() {
 
           <div className="flexboxas2">
             <section className="skiltis">
-              <h1>WORK EXPERIENCE</h1>
+              <h1>{workExperience.title}</h1>
 
               <Separator type="fancy" />
               <div className="work-experience">
                 <div className="job-position job-position--position1">
                   <p>
-                    <b>JOB POSITION</b>
+                    <b>{workExperience.position}</b>
                   </p>
-                  <p>Company</p>
-                  <p>2018 - present</p>
-                  <p className="job-position-p">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas ut justo libero. Vestibulum vitae mattis diam.
-                    Vivamus eleifend diam vel tempor lacinia. Suspendisse non
-                    augue. Lorem ipsum do Consectetur adipiscing elit
-                  </p>
+                  <p>{workExperience.company}</p>
+                  <p>{workExperience.present}</p>
+                  <p className="job-position-p">{workExperience.content}</p>
                 </div>
 
                 <div className="job-position job-position--position2">
                   <p>
-                    <b>JOB POSITION</b>
+                    <b>{workExperience.position}</b>
                   </p>
-                  <p>Company</p>
-                  <p>2018 - present</p>
-                  <p className="job-position-p">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas ut justo libero. Vestibulum vitae mattis diam.
-                    Vivamus eleifend diam vel tempor lacinia. Suspendisse non
-                    augue. Lorem ipsum do Consectetur adipiscing elit
-                  </p>
+                  <p>{workExperience.company}</p>
+                  <p>{workExperience.present}</p>
+                  <p className="job-position-p">{workExperience.content}</p>
                 </div>
 
                 <div className="job-position">
                   <p>
-                    <b>JOB POSITION</b>
+                    <b>{workExperience.position}</b>
                   </p>
-                  <p>Company</p>
-                  <p>2018 - present</p>
-                  <p className="job-position-p">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas ut justo libero. Vestibulum vitae mattis diam.
-                    Vivamus eleifend diam vel tempor lacinia. Suspendisse non
-                    augue. Lorem ipsum do Consectetur adipiscing elit
-                  </p>
+                  <p>{workExperience.company}</p>
+                  <p>{workExperience.present}</p>
+                  <p className="job-position-p">{workExperience.content}</p>
                 </div>
               </div>
             </section>
@@ -157,13 +162,13 @@ function App() {
           <footer className="footer">
             <div className="flexboxas2">
               <div className="testukas-su-media-queries1">
-                <p className="footer-box">ADDRESS</p>
-                <p className="footer-box-padding">Gedimino prospektas.</p>
+                <p className="footer-box">{address.title}</p>
+                <p className="footer-box-padding">{address.content}</p>
                 <p>Vilnius</p>
               </div>
 
               <div className="testukas-su-media-queries2">
-                <p className="footer-box">CONTACT</p>
+                <p className="footer-box">{contact.title}</p>
                 <p className="footer-box-padding">
                   <a href="mailto: cakademirs@gmail.com">
                     cakademirs@gmail.com
@@ -175,9 +180,13 @@ function App() {
               </div>
 
               <div className="testukas-su-media-queries3">
-                <p className="footer-box">SOCIAL</p>
+                <p className="footer-box">{social.title}</p>
                 <p className="footer-box-padding">
-                  <Link LinkSrc={IG_LINK_SRC} imgSrc={InstagramLogo}>
+                  <Link
+                    LinkSrc={IG_LINK_SRC}
+                    imgSrc={InstagramLogo}
+                    iconAlt="icon"
+                  >
                     Instagram
                   </Link>
                 </p>

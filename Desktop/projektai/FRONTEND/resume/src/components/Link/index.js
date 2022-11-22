@@ -1,15 +1,13 @@
 import './index.css';
 
-function Link({ children, LinkSrc, imgSrc }) {
+function Link({ children, LinkSrc, imgSrc, iconAlt }) {
   return (
     <div>
-      {<img src={imgSrc} />}
-      {
-        <a href={LinkSrc} target="_blank">
-          {' '}
-          {children}
-        </a>
-      }
+      <img src={imgSrc} alt={iconAlt} />
+
+      <a href={LinkSrc} target="_blank">
+        {children}
+      </a>
     </div>
   );
 }
